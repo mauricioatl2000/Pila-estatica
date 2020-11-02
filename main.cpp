@@ -36,7 +36,16 @@ int main()
         }
         else if(op == "2")
         {
-            //desapilar
+            if(MiPila.vacia())
+            {
+                cout << "\nLa pila esta vacia."<<endl;
+            }
+            else
+            {
+                cout << "\n\nSe ha desapilado un elemento: "<<MiPila.posicion(cont-1)<<endl;
+                MiPila.borrar(cont-1);
+                cont--;
+            }
         }
         else if(op == "3")
         {
