@@ -44,7 +44,30 @@ int main()
         }
         else if(op == "4")
         {
-            //buscar
+            if(MiPila.vacia())
+            {
+                cout << "\nLa pila esta vacia."<<endl;
+            }
+            else
+            {
+                int numero;
+                bool bandera;
+                bandera = false;
+                cout << "\n\nIngresa un numero: "; cin>>numero;
+                cin.ignore();
+                for(unsigned int i = 0; i < MiPila.cantidad();i++)
+                {
+                    if(numero==MiPila.posicion(i))
+                    {
+                        cout << "\n Se encontro: "<<numero<<" en la posicion: "<<i;
+                        bandera = true;
+                    }
+                }
+                if(bandera==false)
+                {
+                    cout << "No se encontro el numero.";
+                }
+            }
         }
         else if(op == "5")
         {
