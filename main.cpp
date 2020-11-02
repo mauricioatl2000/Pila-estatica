@@ -48,7 +48,14 @@ int main()
         }
         else if(op == "5")
         {
-            //tope
+            if(MiPila.vacia())
+            {
+                cout << "\nLa pila esta vacia."<<endl;
+            }
+            else
+            {
+                cout << "\n\nEl tope de la pila es: "<<MiPila.posicion(cont-1);
+            }
         }
         else if(op == "6")
         {
