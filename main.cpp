@@ -21,7 +21,18 @@ int main()
         cout << "Ingresa una opcion: "; getline(cin, op);
         if(op == "1")
         {
-            //apilar
+            if(!MiPila.llena())
+            {
+                int numero;
+                cout << "\n\nIngresa un numero: "; cin>>numero;
+                cin.ignore();
+                MiPila.insertar(numero);
+                cont++;
+            }
+            else
+            {
+                cout << "\nLa pila esta llena."<<endl;
+            }
         }
         else if(op == "2")
         {
