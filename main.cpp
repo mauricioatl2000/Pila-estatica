@@ -49,7 +49,17 @@ int main()
         }
         else if(op == "3")
         {
-            //mostrar
+            if(MiPila.vacia())
+            {
+                cout << "\nLa pila esta vacia."<<endl;
+            }
+            else
+            {
+                for(unsigned int i = 0; i < MiPila.cantidad();i++)
+                {
+                    cout << "\n"<<MiPila.posicion(i);
+                }
+            }
         }
         else if(op == "4")
         {
